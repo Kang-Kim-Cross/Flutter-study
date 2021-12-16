@@ -23,6 +23,9 @@ samples, guidance on mobile development, and a full API reference.
 
 ```
 flutter run -d Chrome
+
+# or 
+flutter run -d chrome --no-sound-null-safety --web-renderer=html
 ```
 
 ## Build & Run
@@ -30,4 +33,23 @@ flutter run -d Chrome
 ```
 # In Ios 14+
 flutter run --release
+
+# or
+flutter build web --no-sound-null-safety --web-renderer=html
 ```
+
+### TMI
+
+Rendering options
+
+- Auto
+
+If mobile then use HTML, desktop will use Canvaskit
+
+- HTML
+
+Normal web renderer, html, css, canvas ....
+
+- Canvaskit
+
+Skia graphic engine, WebAssembly 
