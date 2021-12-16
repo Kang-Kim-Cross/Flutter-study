@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.all(20.0)
+            padding: EdgeInsets.all(10.0)
           ),
           Icon(Icons.star,
             size: 35,
@@ -133,30 +133,32 @@ My equipment are Ipad 12.9 (2nd gen) and macro keypad. Especially macro keypad s
       ),
     );
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            Image.network(
-              "https://user-images.githubusercontent.com/16532326/146313934-08dbbb3e-b688-40eb-8b5f-d32fd93ab0f7.png", 
-              height: 240,
-              width: 600,
-              fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: EdgeInsets.all(15.0)
-            ),
-            titleSection,
-            Padding(
-              padding: EdgeInsets.all(15.0)
-            ),
-            buttonSection,
-            Padding(
-              padding: EdgeInsets.all(0.0)
-            ),
-            textSection
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Image.network(
+                "https://user-images.githubusercontent.com/16532326/146313934-08dbbb3e-b688-40eb-8b5f-d32fd93ab0f7.png", 
+                height: 240,
+                width: 600,
+                fit: BoxFit.cover,
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0)
+              ),
+              titleSection,
+              Padding(
+                padding: EdgeInsets.all(15.0)
+              ),
+              buttonSection,
+              Padding(
+                padding: EdgeInsets.all(0.0)
+              ),
+              textSection
+            ],
+          ),
         ),
-      ),
+      )
     );
   }
 }
