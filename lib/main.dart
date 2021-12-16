@@ -26,6 +26,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0; //_val : private, val : public
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,10 +37,20 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Push the button"),
-            Text("Counter", style: Theme.of(context).textTheme.headline3,)
+            Text("$_counter", style: Theme.of(context).textTheme.headline3,)
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'This is tooltip',
+        child: Icon(Icons.add),),
     );
+  }
+
+  void _incrementCounter() {
+    setState(() {
+      _counter ++;
+    });
   }
 }
