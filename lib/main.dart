@@ -67,23 +67,51 @@ class _MyHomePageState extends State<MyHomePage> {
     var buttonSection = SizedBox(
       width: 600,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
             children: [
-              Icon(Icons.call),
-              Text("CALL")
+              Icon(Icons.call,
+                size: 45,
+                color: Colors.blue[400],
+              ),
+              Text("CALL",
+                style: TextStyle(
+                  color: Colors.blue[400]
+                ),
+              )
             ],
+          ),
+          Padding(
+            padding: EdgeInsets.all(40.0)
           ),
           Column(
             children: [
-              Icon(Icons.near_me),
-              Text("ROUTE")
+              Icon(Icons.near_me,
+                size: 45,
+                color: Colors.blue[400],
+              ),
+              Text("ROUTE",
+                style: TextStyle(
+                  color: Colors.blue[400]
+                ),
+              )
             ],
+          ),
+          Padding(
+            padding: EdgeInsets.all(40.0)
           ),
           Column(
             children: [
-              Icon(Icons.share),
-              Text("SHARE")
+              Icon(Icons.share,
+                size: 45,
+                color: Colors.blue[400],
+              ),
+              Text("SHARE",
+                style: TextStyle(
+                  color: Colors.blue[400]
+                ),
+              )
             ],
           )
         ],
@@ -92,7 +120,17 @@ class _MyHomePageState extends State<MyHomePage> {
     
     var textSection = SizedBox(
       width: 600,
-      child: Text('asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'),
+      child: Container(
+        child: Text('''Each character takes drawing time 17 hours.
+I'm using procreate.
+My equipment are Ipad 12.9 (2nd gen) and macro keypad. Especially macro keypad so useful to press shortcuts.
+        ''',
+          style: TextStyle(
+            fontSize: 20
+          ),
+        ),
+        padding: EdgeInsets.all(40),
+      ),
     );
     return Scaffold(
       body: Center(
@@ -104,8 +142,17 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 600,
               fit: BoxFit.cover,
             ),
+            Padding(
+              padding: EdgeInsets.all(15.0)
+            ),
             titleSection,
+            Padding(
+              padding: EdgeInsets.all(15.0)
+            ),
             buttonSection,
+            Padding(
+              padding: EdgeInsets.all(0.0)
+            ),
             textSection
           ],
         ),
